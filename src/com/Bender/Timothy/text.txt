@@ -1,0 +1,26 @@
+// Create your hash table
+// ...
+// Read the input file and fill your has table
+// ...
+
+System.out.println("Print original HT");
+HT.printHT();
+
+HT.delete(5032);
+HT.delete(1);
+HT.delete(32055);
+HT.delete(35336);
+HT.delete(123); // Trying to delete an element that is not in the table
+HT.delete(7543);
+HT.delete(6439);
+HT.delete(3530);
+
+System.out.println("\nPrint after removing");
+HT.printHT();
+
+System.out.println("\nFind names");
+System.out.println(HT.get(53536));
+System.out.println(HT.get(22011));
+System.out.println(HT.get(502385));
+System.out.println(HT.get(353945));
+System.out.println(HT.get(36844));
