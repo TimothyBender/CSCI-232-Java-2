@@ -30,6 +30,11 @@ public class MyPanel extends JPanel {
         g.drawImage(image, 0, 0, null);
     }
     public void draw(int startX, int startY, int endX, int endY, int s){
+        try {
+            Thread.sleep(250 * s);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         g2.setColor(new Color(this.color[0],this.color[1],this.color[2]));
         g2.drawLine(startX,startY,endX,endY);
         try {

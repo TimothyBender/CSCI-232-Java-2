@@ -48,7 +48,7 @@ public class Turtle extends JFrame {
     public void right(double d){
         this.bearing -= d;
         if(bearing < 0){
-            bearing = 360 - bearing;
+            bearing = 360 + bearing;
         }
     }
     public void left(int d){
@@ -80,13 +80,12 @@ public class Turtle extends JFrame {
         fd(r);
     }
     public void fd(int r){
-        double[] cartPoints = poleToCart(r);
-        System.out.println("X: " + cartPoints[0]);
-        System.out.println("Y : " + cartPoints[1]);
+        double[] polar = poleToCart(r);
+        double[] toMove = new double[]{polar[0]+location[0],location[1]-polar[1]};
         if(penup != true){
-            MyPanel.getInstance().draw((int)location[0],(int)location[1],(int)cartPoints[0],(int)cartPoints[1],speed);
+            MyPanel.getInstance().draw((int)location[0],(int)location[1],(int)toMove[0],(int)toMove[1],speed);
         }
-        location = cartPoints;
+        location = toMove;
     }
 
     private double[] convertPoints(double[] point){
@@ -117,9 +116,9 @@ public class Turtle extends JFrame {
         }
     }
     private double[] poleToCart(int r /*{r,cos(theta){*/){
-        double x = r*Math.cos(Math.toRadians(this.bearing));
-        double y = r*Math.sin(Math.toRadians(this.bearing));
-        return convertPoints(new double[]{x,y});
+        int x = (int) (r*Math.cos(Math.toRadians(this.bearing)));
+        int y = (int) (r*Math.sin(Math.toRadians(this.bearing)));
+        return new double[]{x,y};
     }
 
     public String toString(){

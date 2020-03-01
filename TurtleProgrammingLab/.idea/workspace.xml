@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a9f897f-bab9-49bd-aac7-29dd497e8d30" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../CSCI 145 Final Project/.idea/CSCI 145 Final Project.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSCI 145 Final Project/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSCI 145 Final Project/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSCI 145 Final Project/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CSCI 145 Final Project/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab2 Threading/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab2 Threading/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab2 Threading/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab2 Threading/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Lab2 Threading/Lab2 Threading.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TurtleProgrammingLab/META-INF/TurtleProgrammingLab.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TurtleProgrammingLab/com/Bender/Timothy/Driver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TurtleProgrammingLab/com/Bender/Timothy/Driver.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TurtleProgrammingLab/com/Bender/Timothy/MyPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TurtleProgrammingLab/com/Bender/Timothy/MyPanel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TurtleProgrammingLab/com/Bender/Timothy/Turtle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TurtleProgrammingLab/com/Bender/Timothy/Turtle.class" afterDir="false" />
@@ -70,6 +58,7 @@
       <workItem from="1582946837400" duration="61000" />
       <workItem from="1582946988007" duration="297000" />
       <workItem from="1582949567106" duration="7000" />
+      <workItem from="1583044194698" duration="2443000" />
     </task>
     <servers />
   </component>
@@ -89,22 +78,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="498" y="196" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1582836697453" />
-    <state width="1493" height="259" key="GridCell.Tab.0.bottom" timestamp="1582946306670">
+    <state width="1493" height="232" key="GridCell.Tab.0.bottom" timestamp="1583046648308">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="259" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1582946306670" />
-    <state width="1493" height="259" key="GridCell.Tab.0.center" timestamp="1582946306670">
+    <state width="1493" height="232" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583046648308" />
+    <state width="1493" height="232" key="GridCell.Tab.0.center" timestamp="1583046648308">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="259" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1582946306670" />
-    <state width="1493" height="259" key="GridCell.Tab.0.left" timestamp="1582946306670">
+    <state width="1493" height="232" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583046648308" />
+    <state width="1493" height="232" key="GridCell.Tab.0.left" timestamp="1583046648308">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="259" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1582946306670" />
-    <state width="1493" height="259" key="GridCell.Tab.0.right" timestamp="1582946306670">
+    <state width="1493" height="232" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583046648308" />
+    <state width="1493" height="232" key="GridCell.Tab.0.right" timestamp="1583046648308">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="259" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1582946306670" />
+    <state width="1493" height="232" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583046648308" />
     <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1582838725092">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -121,9 +110,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1582838725091" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1582949568318">
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1583044195619">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1582949568318" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1583044195619" />
   </component>
 </project>
