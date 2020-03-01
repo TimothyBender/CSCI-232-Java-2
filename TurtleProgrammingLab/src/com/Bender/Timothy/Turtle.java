@@ -4,6 +4,7 @@ import javax.swing.*;
 
 @SuppressWarnings(value = "unused")
 public class Turtle extends JFrame {
+    
     private static Turtle inst;
     private int bearing = 0;
     private int speed = 3;
@@ -53,18 +54,14 @@ public class Turtle extends JFrame {
         location = toMove;
     }
 
-    public void right(double d){
+    public void right(int d){
         this.bearing -= d;
-        if(bearing < 0){
-            bearing = 360 + bearing;
-        }
+        this.bearing = this.bearing % 360; //prevents very large integers. Keeps the angle between 0 - 360
     }
 
     public void left(int d){
         this.bearing += d;
-        if(bearing > 360){
-            bearing = bearing - 360;
-        }
+        this.bearing = this.bearing % 360; //prevents very large integers. Keeps the angle between 0 - 360
     }
 
     public void penup(){this.penup = true;}
@@ -72,14 +69,15 @@ public class Turtle extends JFrame {
     public void pendown(){this.penup = false;}
 
     public void home(){
-        this.location = convertPoints(new double[]{0,0});
-        this.bearing = 0;
+        this.location = convertPoints(new double[]{0,0}); //resets the turtle's location
+        this.bearing = 0;   //resets the bearing
     }
 
     public void goTo(int x, int y){
         double[] toMove = convertPoints(new double[]{x,y});
         if(!penup) {
-            MyPanel.getInstance().draw((int)location[0],(int)location[1],(int)toMove[0],(int)toMove[1],speed);
+            MyPanel.getInstance().draw((int)location[0],
+                    (int)location[1],(int)toMove[0],(int)toMove[1],speed);
         }
         this.location = toMove;
     }

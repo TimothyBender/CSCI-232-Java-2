@@ -12,7 +12,7 @@ public class Driver {
         alex.right(90);
         alex.penup();
         alex.fd(50);
-        alex.right(45);
+        alex.right(410);
         alex.pendown();
         alex.penColor(50,168,82);
         alex.fd(100);

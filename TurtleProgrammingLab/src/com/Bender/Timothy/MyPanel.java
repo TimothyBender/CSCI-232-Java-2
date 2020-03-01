@@ -3,7 +3,6 @@ package com.Bender.Timothy;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.util.Random;
 
 public class MyPanel extends JPanel {
     private static MyPanel inst;
