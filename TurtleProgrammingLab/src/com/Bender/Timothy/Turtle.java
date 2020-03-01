@@ -2,41 +2,38 @@ package com.Bender.Timothy;
 
 import javax.swing.*;
 
+@SuppressWarnings(value = "unused")
 public class Turtle extends JFrame {
     private static Turtle inst;
     private int bearing = 0;
-    private int width;
-    private int height;
     private int speed = 3;
     private boolean penup = false;
     private double[] location;
+    private static String name = "Alex";
 
     public static Turtle getInstance(int w, int h) {
         if (inst == null)
             inst = new Turtle(w, h);
         return inst;
     }
-    /*
-    TO DO
-    Fix polar coordinate system
-    fix fd
-     */
+
     private Turtle(int w, int h){
-        setTitle("Turtle");
+        setTitle("Turtle " + name);
+
         if(w < 200)
             w = 200;
         if(h < 200)
             h = 200;
         w += 14;
         h += 37;
+
         setSize(w,h);
-        //14, 37
-        this.width = w;
-        this.height = h;
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         MyPanel mp = MyPanel.getInstance();
         this.getContentPane().add(mp);
         setVisible(true);
+
         try {
             Thread.sleep(50);
         } catch (InterruptedException e) {
@@ -45,12 +42,24 @@ public class Turtle extends JFrame {
         this.location = convertPoints(new double[]{0,0});
     }
 
+    public void forward(int r){fd(r);}
+
+    public void fd(int r){
+        double[] polar = poleToCart(r);
+        double[] toMove = new double[]{polar[0]+location[0],location[1]-polar[1]};
+        if(!penup){
+            MyPanel.getInstance().draw((int)location[0],(int)location[1],(int)toMove[0],(int)toMove[1],speed);
+        }
+        location = toMove;
+    }
+
     public void right(double d){
         this.bearing -= d;
         if(bearing < 0){
             bearing = 360 + bearing;
         }
     }
+
     public void left(int d){
         this.bearing += d;
         if(bearing > 360){
@@ -58,12 +67,10 @@ public class Turtle extends JFrame {
         }
     }
 
-    public void penup(){
-        this.penup = true;
-    }
-    public void pendown(){
-        this.penup = false;
-    }
+    public void penup(){this.penup = true;}
+
+    public void pendown(){this.penup = false;}
+
     public void home(){
         this.location = convertPoints(new double[]{0,0});
         this.bearing = 0;
@@ -71,34 +78,25 @@ public class Turtle extends JFrame {
 
     public void goTo(int x, int y){
         double[] toMove = convertPoints(new double[]{x,y});
-        if(penup != true) {
+        if(!penup) {
             MyPanel.getInstance().draw((int)location[0],(int)location[1],(int)toMove[0],(int)toMove[1],speed);
         }
         this.location = toMove;
     }
-    public void forward(int r){
-        fd(r);
-    }
-    public void fd(int r){
-        double[] polar = poleToCart(r);
-        double[] toMove = new double[]{polar[0]+location[0],location[1]-polar[1]};
-        if(penup != true){
-            MyPanel.getInstance().draw((int)location[0],(int)location[1],(int)toMove[0],(int)toMove[1],speed);
-        }
-        location = toMove;
-    }
 
-    private double[] convertPoints(double[] point){
-        double x = point[0] + MyPanel.getInstance().getWidth()/2;
-        double y = MyPanel.getInstance().getHeight()/2 - point[1];
-        return new double[]{x,y};
-    }
     public int xcor(){return (int)location[0];}
+
     public int ycor(){return (int)location[1];}
-    public void setHeading(int h){this.bearing = h;}
+
+    public void setHeading(int h){
+        if(h < 360 && h >= 0) {
+            this.bearing = h;
+        }
+
+    }
 
     public void speed(int x){
-        if(x > 5 || x<1){
+        if(x > 5 || x < 1){
             System.out.println("Invalid speed (1-5)");
         }
         else {
@@ -106,23 +104,12 @@ public class Turtle extends JFrame {
         }
     }
 
-    public void clear(){
+    public void pensize(int s){MyPanel.getInstance().lineSize(s);}
+
+    public void clear() throws InterruptedException {
         MyPanel.getInstance().resetPanel(this.speed);
         MyPanel.getInstance();
-        try {
-            Thread.sleep(100);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
-    private double[] poleToCart(int r /*{r,cos(theta){*/){
-        int x = (int) (r*Math.cos(Math.toRadians(this.bearing)));
-        int y = (int) (r*Math.sin(Math.toRadians(this.bearing)));
-        return new double[]{x,y};
-    }
-
-    public String toString(){
-        return "Turtle alex";
+        Thread.sleep(100);
     }
 
     public void penColor(int r, int g, int b){
@@ -133,4 +120,23 @@ public class Turtle extends JFrame {
             MyPanel.getInstance().setColor(r,g,b);
         }
     }
+
+    public void setName(String n){
+        name = n;
+    }
+
+    private double[] convertPoints(double[] point){
+        return new double[]{point[0] + (MyPanel.getInstance().getWidth() >> 1),
+                (MyPanel.getInstance().getHeight() >> 1) - point[1]};
+    }
+
+    private double[] poleToCart(int r /*{r,cos(theta){*/){
+        return new double[]{(int) (r*Math.cos(Math.toRadians(this.bearing))),
+                (int) (r*Math.sin(Math.toRadians(this.bearing)))};
+    }
+
+    public String toString(){
+        return "Turtle alex";
+    }
+
 }

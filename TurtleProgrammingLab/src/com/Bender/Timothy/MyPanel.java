@@ -20,6 +20,7 @@ public class MyPanel extends JPanel {
     private MyPanel(){
 
     }
+
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
@@ -29,16 +30,17 @@ public class MyPanel extends JPanel {
         }
         g.drawImage(image, 0, 0, null);
     }
+
     public void draw(int startX, int startY, int endX, int endY, int s){
         try {
-            Thread.sleep(250 * s);
+            Thread.sleep(200 * s);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         g2.setColor(new Color(this.color[0],this.color[1],this.color[2]));
         g2.drawLine(startX,startY,endX,endY);
         try {
-            Thread.sleep(250 * s);
+            Thread.sleep(200 * s);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -60,6 +62,10 @@ public class MyPanel extends JPanel {
         color[0] = r;
         color[1] = g;
         color[2] = b;
+    }
+
+    public void lineSize(int s){
+        g2.setStroke(new BasicStroke(s));
     }
 
 }
