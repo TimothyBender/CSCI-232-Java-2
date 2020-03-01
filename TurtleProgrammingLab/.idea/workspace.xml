@@ -1,13 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6c654b0f-4dfe-4ddb-a245-18d86360480c" name="Default Changelist" comment="" />
+    <list default="true" id="3a9f897f-bab9-49bd-aac7-29dd497e8d30" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../CSCI 145 Final Project/.idea/CSCI 145 Final Project.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CSCI 145 Final Project/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CSCI 145 Final Project/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CSCI 145 Final Project/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CSCI 145 Final Project/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab2 Threading/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab2 Threading/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab2 Threading/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab2 Threading/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab2 Threading/Lab2 Threading.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TurtleProgrammingLab/META-INF/TurtleProgrammingLab.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TurtleProgrammingLab/com/Bender/Timothy/Driver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TurtleProgrammingLab/com/Bender/Timothy/Driver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TurtleProgrammingLab/com/Bender/Timothy/MyPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TurtleProgrammingLab/com/Bender/Timothy/MyPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TurtleProgrammingLab/com/Bender/Timothy/Turtle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TurtleProgrammingLab/com/Bender/Timothy/Turtle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Bender/Timothy/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Bender/Timothy/Driver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Bender/Timothy/MyPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Bender/Timothy/MyPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Bender/Timothy/Turtle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Bender/Timothy/Turtle.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectId" id="1YKlPWmgpPQo68SbQhAxogw1eM9" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1YPG2FjCsfNiSndV4Zm8HpGj9Ia" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -18,17 +42,34 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
   </component>
+  <component name="RunManager">
+    <configuration name="main" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.Bender.Timothy.Driver" />
+      <module name="TurtleProgrammingLab" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6c654b0f-4dfe-4ddb-a245-18d86360480c" name="Default Changelist" comment="" />
-      <created>1582699142722</created>
+      <changelist id="3a9f897f-bab9-49bd-aac7-29dd497e8d30" name="Default Changelist" comment="" />
+      <created>1582836606204</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1582699142722</updated>
-      <workItem from="1582699145222" duration="21000" />
+      <updated>1582836606204</updated>
+      <workItem from="1582836609026" duration="46000" />
+      <workItem from="1582836681303" duration="1977000" />
+      <workItem from="1582838686525" duration="39000" />
+      <workItem from="1582924570664" duration="4774000" />
+      <workItem from="1582933737595" duration="9729000" />
+      <workItem from="1582945679610" duration="622000" />
+      <workItem from="1582946837400" duration="61000" />
+      <workItem from="1582946988007" duration="297000" />
+      <workItem from="1582949567106" duration="7000" />
     </task>
     <servers />
   </component>
@@ -36,9 +77,53 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="470" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1582699145878">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582836958189">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="470" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1582699145878" />
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1582836958189" />
+    <state x="958" y="125" key="#com.intellij.ide.util.MemberChooser" timestamp="1582938327934">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="958" y="125" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1582938327934" />
+    <state x="498" y="196" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1582836697453">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="498" y="196" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1582836697453" />
+    <state width="1493" height="259" key="GridCell.Tab.0.bottom" timestamp="1582946306670">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="259" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1582946306670" />
+    <state width="1493" height="259" key="GridCell.Tab.0.center" timestamp="1582946306670">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="259" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1582946306670" />
+    <state width="1493" height="259" key="GridCell.Tab.0.left" timestamp="1582946306670">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="259" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1582946306670" />
+    <state width="1493" height="259" key="GridCell.Tab.0.right" timestamp="1582946306670">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="259" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1582946306670" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1582838725092">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1582838725092" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1582838725091">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1582838725091" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1582838725091">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1582838725091" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1582838725091">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1582838725091" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1582949568318">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1582949568318" />
   </component>
 </project>
