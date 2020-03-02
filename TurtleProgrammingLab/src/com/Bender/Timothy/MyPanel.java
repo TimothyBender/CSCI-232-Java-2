@@ -63,7 +63,8 @@ public class MyPanel extends JPanel {
         color[2] = b;
     }
 
-    public void lineSize(int s){
+    public void lineSize(int s) throws InterruptedException {
+        Thread.sleep(50);
         g2.setStroke(new BasicStroke(s));
     }
 

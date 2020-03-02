@@ -102,7 +102,7 @@ public class Turtle extends JFrame {
         }
     }
 
-    public void pensize(int s){MyPanel.getInstance().lineSize(s);}
+    public void pensize(int s) throws InterruptedException {MyPanel.getInstance().lineSize(s);}
 
     public void clear() throws InterruptedException {
         MyPanel.getInstance().resetPanel(this.speed);

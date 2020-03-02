@@ -23,8 +23,5 @@ public class Driver {
         alex.fd(100);
         alex.penColor(50,72,168);
         alex.goTo(250,250);
-
-
-
     }
 }
