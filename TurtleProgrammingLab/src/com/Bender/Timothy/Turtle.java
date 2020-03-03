@@ -94,7 +94,7 @@ public class Turtle extends JFrame {
     }
 
     public void speed(int x){
-        if(x > 5 || x < 1){
+        if(x > 5 || x < 0){
             System.out.println("Invalid speed (1-5)");
         }
         else {
@@ -111,7 +111,7 @@ public class Turtle extends JFrame {
     }
 
     public void penColor(int r, int g, int b){
-        if(r > 250 || r < 0 || g > 250 || g < 0 || b > 250 || b < 0){
+        if(r > 255 || r < 0 || g > 255 || g < 0 || b > 255 || b < 0){
             System.out.println("Invalid color");
         }
         else{

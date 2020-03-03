@@ -1,4 +1,3 @@
-package com.Bender.Timothy;
 import java.util.Scanner;
 public class Main {
 
