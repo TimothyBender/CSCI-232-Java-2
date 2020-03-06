@@ -4,16 +4,17 @@ public class Driver {
 
     public static void main(String[] args) throws InterruptedException {
         Turtle alex = Turtle.getInstance(600,600);
-        drawhex(alex);
+        drawhex(alex,360);
         alex.clear();
         alex.home();
         drawcolorhex(alex);
     }
 
-    public static void drawhex(Turtle alex) throws InterruptedException {
+    public static void drawhex(Turtle alex, int n) throws InterruptedException {
         alex.speed(0);
-        for(int x = 0; x < 360; x++){
-            alex.pensize(x/100 + 1);
+        int[] extraHex = new int[8];
+        for(int x = 0; x < n; x++){
+            alex.pensize(x / 100 + 1);
             alex.forward(x);
             alex.left(91);
         }

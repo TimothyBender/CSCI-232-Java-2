@@ -82,9 +82,15 @@ public class Turtle extends JFrame {
         this.location = toMove;
     }
 
-    public int xcor(){return (int)location[0];}
+    public int xcor(){
+        int x = (int)convertPoints(location)[0];
+        return x;
+    }
 
-    public int ycor(){return (int)location[1];}
+    public int ycor(){
+        int y = (int)convertPoints(location)[1];
+        return y;
+    }
 
     public void setHeading(int h){
         if(h < 360 && h >= 0) {
