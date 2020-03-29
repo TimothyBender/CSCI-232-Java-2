@@ -1,6 +1,5 @@
 package com.company;
 
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.Scanner;
@@ -28,12 +27,7 @@ public class Driver {
 
 // Step 2: Print the graph
 		graph.printGraph();
-		graph.findEdges(0);
-		graph.findEdges(1);
-		graph.findEdges(2);
-		graph.findEdges(3);
-		graph.findEdges(4);
-		graph.findEdges(5);
+		graph.findNeighbors();
 
 // Step 4: Breadth-First Search (slide 22, GraphsIntro)
 		graph.bfs(2);
@@ -48,26 +42,25 @@ public class Driver {
 /* Email said no warshalls
 		graph.warshall(2);
 		graph.warshall(5);
-		System.out.println("\n");
-
- */
-		fl = new FileReader("src/intputw.txt");
+		*/
+		System.out.println();
+		fl = new FileReader("src/inputw.txt");
 		sc = new Scanner(fl);
-// I included one number in the first row of the file so you know a priori
-// the number of elements of the graph. You can remove it if you don't need it.
 		size = sc.nextInt();
-		GraphAdjacent graph2 = new GraphAdjacent(elements);
+		GraphAdjacent graph2 = new GraphAdjacent(size);
 
 // Step 7: Print the new graph
-		for (int i = 0; i < elements; i++) {
+		for (int i = 0; i < size; i++) {
 			graph2.addNode(i);
-			for (int j = 0; j < elements ; j++) {
-				digit = fin.nextInt();
-				if (digit > 0) graph2.addEdge(i, j, digit);
+			for (int j = 0; j < size ; j++) {
+				storage = sc.nextInt();
+				if (storage > 0) graph2.addEdge(i, j, storage);
 			}
 		}
+		System.out.println("Graph: Adjacency Matrix");
 		graph2.printGraph();
-
+		graph2.findNeighbors();
+/*
 // Step 8: Dijkstra's algorithm for shortest path
 // The slides 22 and 27 were useful to me for the two first algorithms (actually, it's pretty straightforward);
 // however, the slide 32 looks very confusing, so I'd recommend you to check this lecture:

@@ -96,11 +96,16 @@ public class Graph {
         }
     }
 
-    public void findEdges(int vertex){
-        String connections = "";
-        for(Integer x : this.vertex[vertex].getEdges()) {
-            connections += x + " ";
+    public void findNeighbors(){
+        String connections;
+        int counter = 0;
+        for(Node w : vertex) {
+            connections = "";
+            for(Integer x : w.getEdges()){
+                connections += x;
+            }
+            System.out.println("Node " + counter + " is connected to: " + connections);
+            counter ++;
         }
-        System.out.println("Node " + vertex + " is connected to: " + connections);
     }
 }
