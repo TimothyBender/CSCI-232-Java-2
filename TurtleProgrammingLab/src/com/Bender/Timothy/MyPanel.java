@@ -54,7 +54,6 @@ public class MyPanel extends JPanel {
         }
         super.paintComponent(g2);
         repaint();
-
     }
 
     public void setColor(int r, int g, int b){

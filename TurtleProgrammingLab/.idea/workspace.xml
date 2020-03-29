@@ -4,11 +4,30 @@
     <list default="true" id="3a9f897f-bab9-49bd-aac7-29dd497e8d30" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../2020-03-03 10-54-05.mkv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../2020-03-03 10-58-37.mkv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Graphing Inlab/out/production/Graphing Inlab/com/company/Driver.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Graphing Inlab/out/production/Graphing Inlab/com/company/Driver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Graphing Inlab/out/production/Graphing Inlab/com/company/Graph.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Graphing Inlab/out/production/Graphing Inlab/com/company/Graph.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Graphing Inlab/out/production/Graphing Inlab/com/company/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Graphing Inlab/out/production/Graphing Inlab/com/company/Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Graphing Inlab/src/com/company/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Graphing Inlab/src/com/company/Driver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Graphing Inlab/src/com/company/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Graphing Inlab/src/com/company/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Graphing Inlab/src/com/company/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Graphing Inlab/src/com/company/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab 1 Binary Tree/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab 1 Binary Tree/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab 1 Binary Tree/.idea/dictionaries/Timothy_Bender.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab 1 Binary Tree/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab 1 Binary Tree/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab 1 Binary Tree/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab 1 Binary Tree/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab 1 Binary Tree/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab 1 Binary Tree/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab 1 Binary Tree/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab 1 Binary Tree/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab 1 Binary Tree/Lab 1 Binary Tree.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab 1 Binary Tree/Lab 1 Binary Tree.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab 1 Binary Tree/out/production/Lab 1 Binary Tree/META-INF/Lab 1 Binary Tree.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab 1 Binary Tree/out/production/Lab 1 Binary Tree/com/Bender/Timothy/Dog.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab 1 Binary Tree/out/production/Lab 1 Binary Tree/com/Bender/Timothy/Dog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab 1 Binary Tree/out/production/Lab 1 Binary Tree/com/Bender/Timothy/Driver.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab 1 Binary Tree/out/production/Lab 1 Binary Tree/com/Bender/Timothy/Driver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab 1 Binary Tree/out/production/Lab 1 Binary Tree/com/Bender/Timothy/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab 1 Binary Tree/out/production/Lab 1 Binary Tree/com/Bender/Timothy/Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab 1 Binary Tree/out/production/Lab 1 Binary Tree/com/Bender/Timothy/TreeMaster.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab 1 Binary Tree/out/production/Lab 1 Binary Tree/com/Bender/Timothy/TreeMaster.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TurtleProgrammingLab/com/Bender/Timothy/Driver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TurtleProgrammingLab/com/Bender/Timothy/Driver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TurtleProgrammingLab/com/Bender/Timothy/Turtle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TurtleProgrammingLab/com/Bender/Timothy/Turtle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Bender/Timothy/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Bender/Timothy/Driver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Bender/Timothy/Turtle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Bender/Timothy/Turtle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TurtleProgrammingLab/com/Bender/Timothy/MyPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TurtleProgrammingLab/com/Bender/Timothy/MyPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Bender/Timothy/MyPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Bender/Timothy/MyPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +96,8 @@
       <workItem from="1583341887592" duration="16000" />
       <workItem from="1583385357666" duration="103000" />
       <workItem from="1583443127303" duration="14000" />
+      <workItem from="1583521760688" duration="470000" />
+      <workItem from="1583522707569" duration="54000" />
     </task>
     <servers />
   </component>
@@ -96,22 +117,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="498" y="196" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1582836697453" />
-    <state width="1493" height="231" key="GridCell.Tab.0.bottom" timestamp="1583385461383">
+    <state width="1493" height="231" key="GridCell.Tab.0.bottom" timestamp="1583522761822">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="231" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583385461383" />
-    <state width="1493" height="231" key="GridCell.Tab.0.center" timestamp="1583385461383">
+    <state width="1493" height="231" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583522761822" />
+    <state width="1493" height="231" key="GridCell.Tab.0.center" timestamp="1583522761822">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="231" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583385461383" />
-    <state width="1493" height="231" key="GridCell.Tab.0.left" timestamp="1583385461383">
+    <state width="1493" height="231" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583522761822" />
+    <state width="1493" height="231" key="GridCell.Tab.0.left" timestamp="1583522761806">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="231" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583385461383" />
-    <state width="1493" height="231" key="GridCell.Tab.0.right" timestamp="1583385461383">
+    <state width="1493" height="231" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583522761806" />
+    <state width="1493" height="231" key="GridCell.Tab.0.right" timestamp="1583522761822">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="231" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583385461383" />
+    <state width="1493" height="231" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583522761822" />
     <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1582838725092">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
