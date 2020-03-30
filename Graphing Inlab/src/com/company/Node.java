@@ -3,31 +3,27 @@ package com.company;
 import java.util.ArrayList;
 
 public class Node {
-
     int data;
     boolean visited;
-    ArrayList<Integer> edges;
-    ArrayList<Integer> weight;
+    ArrayList<Edge> edges;
+    Node parent;
+    int distance = Integer.MAX_VALUE;
 
     public Node(int d){
         this.data = d;
         this.visited = false;
-        edges = new ArrayList<Integer>();
-        weight = new ArrayList<Integer>();
+        edges = new ArrayList<Edge>();
+        parent = null;
     }
 
-    public void addEdge(int x){
-        edges.add(x);
+    public void addEdge(Node x){
+        edges.add(new Edge(x));
     }
-    public void addEdge(int j, int weight){
-        this.edges.add(j);
-        this.weight.add(weight);
+    public void addEdge(Node j, int weight){
+        this.edges.add(new Edge(j,weight));
     }
-    public ArrayList<Integer> getEdges(){
+    public ArrayList<Edge> getEdges(){
         return edges;
-    }
-    public int getWeight(int x){
-        return weight.get(x);
     }
     public String toString(){
         return String.valueOf(this.data);

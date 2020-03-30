@@ -15,14 +15,16 @@ public class Driver {
 		int size = Integer.parseInt(sizeS);
 		Graph graph = new Graph(size);
 		sc.nextLine();
-		for (int x = 0; x < size; x++){
+		for(int x = 0; x < size; x++) {
 			graph.addNode(x);
+		}
+		for(int t = 0; t < size; t ++){
 			for (int y = 0; y < size; y++){
 				storage = sc.nextInt();
 				if (storage == 1){
-					graph.addEdge(x,y);
+					graph.addEdge(t,y);
 				}
-			}
+				}
 		}
 
 // Step 2: Print the graph
@@ -43,6 +45,8 @@ public class Driver {
 		graph.warshall(2);
 		graph.warshall(5);
 		*/
+
+//Read in the new file and make a new graph
 		System.out.println();
 		fl = new FileReader("src/inputw.txt");
 		sc = new Scanner(fl);
@@ -60,14 +64,16 @@ public class Driver {
 		System.out.println("Graph: Adjacency Matrix");
 		graph2.printGraph();
 		graph2.findNeighbors();
-/*
+
 // Step 8: Dijkstra's algorithm for shortest path
 // The slides 22 and 27 were useful to me for the two first algorithms (actually, it's pretty straightforward);
 // however, the slide 32 looks very confusing, so I'd recommend you to check this lecture:
 // https://www.coursera.org/learn/algorithms-part2/lecture/2e9Ic/dijkstras-algorithm
 // and this post https://java2blog.com/dijkstra-java/
 		graph2.dijkstra(2);
-
+		System.out.println(graph2.getDistance(2));
+		//graph2.closestPath(3);
+/*
 // Step 9: Prim's algorithm for Minimum Spanning Tree
 // Prim is somehow similar to Dijkstra, so if you solved the previous one, then you solved Prim.
 		graph2.prim(2);
