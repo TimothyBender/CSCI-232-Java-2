@@ -121,16 +121,13 @@ public class GraphAdjacent {
         reached.add(start);
         unreached[s] = 0;
         distances[start] = 0;
-        //System.out.println("Starting at vertex " + start);
         while(!checkIfEmpty(unreached)){
             int minimumNode = Integer.MAX_VALUE;
             int minimumdistance = Integer.MAX_VALUE;
             int xtrack = Integer.MAX_VALUE;
-            //System.out.println("Contents of reached " + reached);
             for(int x : reached){
                 for(Edge e : matrix[x].getEdges()){
                     if(!reached.contains(e.finish.data)){
-                        //System.out.println("Checking edge " + x + " to " + e.finish.data);
                         if(e.weight < minimumdistance){
                             minimumdistance = e.weight;
                             minimumNode = e.finish.data;
@@ -148,8 +145,6 @@ public class GraphAdjacent {
                 reached.add(minimumNode);
                 unreached[minimumNode] = 0;
                 distances[minimumNode] = minimumdistance;
-                //System.out.println("Edge from " + xtrack + " to minimum node" + minimumNode);
-                //System.out.println("Weight: " + minimumdistance);
             }
         }
 
