@@ -7,7 +7,10 @@ public class Node {
     boolean visited;
     ArrayList<Edge> edges;
     Node parent;
-    int distance = Integer.MAX_VALUE;
+
+    int length = Integer.MAX_VALUE;
+    int status = 1;
+    //1 is temporary, 2 is permanent
 
     public Node(int d){
         this.data = d;

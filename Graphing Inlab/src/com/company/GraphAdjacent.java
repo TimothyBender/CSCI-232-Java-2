@@ -1,41 +1,53 @@
 package com.company;
 
+import javafx.util.Pair;
+
 import java.util.*;
 
 public class GraphAdjacent {
     int[][] graph;
     Node[] matrix;
+    int[] distances;
+    ArrayList<Integer> reached;
+    int[] unreached;
     int size;
     int start;
+    int verticies;
 
     GraphAdjacent(int size){
         matrix = new Node[size];
         graph = new int[size][size];
         this.size = size;
+        distances = new int[size];
+        for(int x = 0; x < size; x++){
+            distances[x] = Integer.MAX_VALUE;
+        }
+        unreached = new int[size];
+        reached = new ArrayList<Integer>();
+        verticies = 0;
     }
 
     public void dijkstra(int s){
         this.start = s;
         resetVisits();
-        System.out.println("Starting at node " + s);
-        matrix[s].distance = 0;
-        System.out.println("Matrix start distance " + matrix[s].distance);
+        resetDistances();
+        distances[s] = 0;
         ArrayList<Integer> que = new ArrayList<Integer>();
         que.add(start);
         matrix[start].visited = true;
-
         while(!que.isEmpty()){
             int currentNode = que.remove(0);
-            System.out.println("Visiting Node " + currentNode);
             matrix[currentNode].visited = true;
-
-            
+            for(Edge e : matrix[currentNode].getEdges()) {
+                if (matrix[e.finish.data].visited == false) {
+                    if (distances[e.finish.data] > distances[currentNode] + e.weight){
+                        distances[e.finish.data] = distances[currentNode] + e.weight;
+            }
+        }
+            }
             int nextNode = closestNode(currentNode);
             if(nextNode != -1) {
                 que.add(nextNode);
-            }
-            else{
-                break;
             }
         }
     }
@@ -43,7 +55,6 @@ public class GraphAdjacent {
     public int closestNode(int currentNode){
         int distance = Integer.MAX_VALUE;
         int closestNode = -1;
-        //System.out.println("Edges of " + currentNode.data + " are " + currentNode.getEdges());
         for(Edge e : matrix[currentNode].getEdges()){
             if(matrix[e.finish.data].visited == false){
                 if(e.weight < distance){
@@ -61,22 +72,97 @@ public class GraphAdjacent {
 
     public void closestPath(int d){
         String path = "";
-        int temp = d;
-        int distance = Integer.MAX_VALUE;
-        while(d != this.start){
-            path += temp;
-            System.out.println("Visiting Node for closest Path : " + temp);
-            System.out.println("Edges for Closest Path: " + matrix[temp].getEdges());
-            for(Edge e : matrix[temp].getEdges()){
-                System.out.println(e.finish.distance);
-                if(e.finish.distance < distance){
-                    distance = e.finish.distance;
-                    temp = e.finish.data;
-                }
+        boolean toContinue = true;
+        int distance = distances[d];
+        for(Edge e : matrix[d].getEdges()){
+            if(e.finish.data == start){
+                toContinue = false;
+                System.out.println("Using Dijkstra, the shortest path from node #" + start +
+                        " to node #" + d + " has a weight of " + distance + " with path: " + start + d);
+                return;
             }
         }
-        System.out.println(path);
+        if (distances[d] != Integer.MAX_VALUE) {
+            int currentNode = d;
+            int tempdistance = Integer.MAX_VALUE;
+            while (currentNode != start) {
+                for (Edge e : matrix[currentNode].getEdges()) {
+                    if (distances[e.finish.data] < tempdistance) {
+                        path += currentNode;
+                        tempdistance = distances[e.finish.data];
+                        currentNode = e.finish.data;
 
+                    }
+                }
+            }
+            path += currentNode;
+            String finalPath = "";
+            for (int i = path.length() - 1; i >= 0; i--) {
+                finalPath += path.charAt(i);
+            }
+            System.out.println("Using Dijkstra, the shortest path from node #" + start +
+                    " to node #" + d + " has a weight of " + distance + " with path: " + finalPath);
+        } else {
+            System.out.println("Using Dijkstra, the shortest path from node #" + start +
+                    " to node #" + d + " No Path found");
+        }
+    }
+
+
+    public void prim(int s){
+        System.out.println("Using Prim, the MST starting from node #" + s + "is:");
+        resetParents();
+        resetVisits();
+        resetDistances();
+        for(int i = 0; i < size; i++){
+            unreached[i] = 1;
+        }
+        int start = s;
+        reached.add(start);
+        unreached[s] = 0;
+        distances[start] = 0;
+        //System.out.println("Starting at vertex " + start);
+        while(!checkIfEmpty(unreached)){
+            int minimumNode = Integer.MAX_VALUE;
+            int minimumdistance = Integer.MAX_VALUE;
+            int xtrack = Integer.MAX_VALUE;
+            //System.out.println("Contents of reached " + reached);
+            for(int x : reached){
+                for(Edge e : matrix[x].getEdges()){
+                    if(!reached.contains(e.finish.data)){
+                        //System.out.println("Checking edge " + x + " to " + e.finish.data);
+                        if(e.weight < minimumdistance){
+                            minimumdistance = e.weight;
+                            minimumNode = e.finish.data;
+                            xtrack = x;
+                        }
+                    }
+                }
+            }
+            if(minimumdistance == Integer.MAX_VALUE){
+                break;
+            }
+            if(minimumNode < Integer.MAX_VALUE) {
+                System.out.println("From " + xtrack + " to " + minimumNode
+                        + " Weight: " + minimumdistance);
+                reached.add(minimumNode);
+                unreached[minimumNode] = 0;
+                distances[minimumNode] = minimumdistance;
+                //System.out.println("Edge from " + xtrack + " to minimum node" + minimumNode);
+                //System.out.println("Weight: " + minimumdistance);
+            }
+        }
+
+    }
+
+    public boolean checkIfEmpty(int[] unreached){
+        boolean toReturn = true;
+        for(int x : unreached){
+            if (x==1){
+                toReturn = false;
+            }
+        }
+        return toReturn;
     }
 
     public void addNode(int i){
@@ -115,8 +201,23 @@ public class GraphAdjacent {
         }
     }
 
-    public int getDistance(int x){
-        return matrix[x].distance;
+    public void resetDistances(){
+        for(int x : distances){
+            x = Integer.MAX_VALUE;
+        }
+    }
+
+    public void resetParents(){
+        for(Node x : matrix){
+            x.parent = null;
+        }
+    }
+
+    public void getDistances(){
+        System.out.println("Distances are : ");
+        for(int i = 0; i < distances.length; i++){
+            System.out.println("Node " +  i + " distance: " + distances[i]);
+        }
     }
 
 }

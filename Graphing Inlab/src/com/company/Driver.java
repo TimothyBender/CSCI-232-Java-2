@@ -27,17 +27,12 @@ public class Driver {
 				}
 		}
 
-// Step 2: Print the graph
 		graph.printGraph();
 		graph.findNeighbors();
-
-// Step 4: Breadth-First Search (slide 22, GraphsIntro)
 		graph.bfs(2);
 		graph.bfs(5);
 
-// Step 5: Depth-First Search   (slide 27, GraphsIntro)
-// Obviously, the result is the same as with BFS, but the implementation is different.
-// DFS is simpler but slower.
+
 		graph.dfs(2);
 		graph.dfs(5);
 /*
@@ -53,7 +48,6 @@ public class Driver {
 		size = sc.nextInt();
 		GraphAdjacent graph2 = new GraphAdjacent(size);
 
-// Step 7: Print the new graph
 		for (int i = 0; i < size; i++) {
 			graph2.addNode(i);
 			for (int j = 0; j < size ; j++) {
@@ -65,24 +59,18 @@ public class Driver {
 		graph2.printGraph();
 		graph2.findNeighbors();
 
-// Step 8: Dijkstra's algorithm for shortest path
-// The slides 22 and 27 were useful to me for the two first algorithms (actually, it's pretty straightforward);
-// however, the slide 32 looks very confusing, so I'd recommend you to check this lecture:
-// https://www.coursera.org/learn/algorithms-part2/lecture/2e9Ic/dijkstras-algorithm
-// and this post https://java2blog.com/dijkstra-java/
+
 		graph2.dijkstra(2);
-		System.out.println(graph2.getDistance(2));
-		//graph2.closestPath(3);
-/*
+		for(int x = 0; x <= 6; x++) {
+			graph2.closestPath(x);
+		}
+
+
 // Step 9: Prim's algorithm for Minimum Spanning Tree
 // Prim is somehow similar to Dijkstra, so if you solved the previous one, then you solved Prim.
-		graph2.prim(2);
+		System.out.println();
+		graph2.prim(2); //should follow the path 2-0,0-4,4-1,1-3. Giving a total edgeweight of 16
 
-// Floyd-Warshall's algorithm for shortest path is not applicable for this case
-// so, even when it's easy to implement, I've decided to not take it into account
-// in order to avoid confusions
-
- */
     }
 
 
