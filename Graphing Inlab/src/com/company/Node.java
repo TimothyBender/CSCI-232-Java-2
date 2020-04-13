@@ -8,10 +8,6 @@ public class Node {
     ArrayList<Edge> edges;
     Node parent;
 
-    int length = Integer.MAX_VALUE;
-    int status = 1;
-    //1 is temporary, 2 is permanent
-
     public Node(int d){
         this.data = d;
         this.visited = false;

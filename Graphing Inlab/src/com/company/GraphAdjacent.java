@@ -1,7 +1,4 @@
 package com.company;
-
-import javafx.util.Pair;
-
 import java.util.*;
 
 public class GraphAdjacent {
@@ -205,13 +202,6 @@ public class GraphAdjacent {
     public void resetParents(){
         for(Node x : matrix){
             x.parent = null;
-        }
-    }
-
-    public void getDistances(){
-        System.out.println("Distances are : ");
-        for(int i = 0; i < distances.length; i++){
-            System.out.println("Node " +  i + " distance: " + distances[i]);
         }
     }
 
