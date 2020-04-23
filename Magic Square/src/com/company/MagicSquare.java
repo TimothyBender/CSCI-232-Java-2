@@ -3,135 +3,110 @@ package com.company;
 import java.util.HashSet;
 
 public class MagicSquare {
-    static int[][] test;
-    static int[][] magicsquare;
-    static HashSet<Integer> used;
-    int size,len;
-    static boolean done;
-    public MagicSquare(int x){
-        len = x;
-        size = x * x;
-        //magicsquare = new int[][]{{2,7,6},
-        //                          {9,5,1},
-        //                          {4,3,8}};
-        magicsquare = new int[len][len];
-        used = new HashSet<Integer>();
+
+    private static int[][] magicSquare;
+    private static HashSet<Integer> used;
+    private int size,len,SUM;
+    private static boolean done;
+
+    public MagicSquare(int size){
+        switch (size){
+            case 3:
+                this.SUM = 15;
+                break;
+            case 5:
+                this.SUM = 65;
+        }
+        this.len = size;
+        this.size = size * size;
+        magicSquare = new int[len][len];
+        used = new HashSet<>();
         done = false;
+        System.out.println("Finding magic square for a "+ len +"x" +len + " magic square...");
     }
 
-
-    /*public void solve2(int pos){
-        testMagic();
-    }
-
-     */
-    public void solve2(int pos) {
-        System.out.println("Pos: " + pos);
-        int row = pos /3;
-        int col = pos %3;
-        System.out.println("Row: " + row);
-        System.out.println("Col: " +col);
-        print();
-        for(int i = 1; i < 10; i++){
+    //overloaded so you don't need a starting position...
+    public void solve(){solve(0);}
+    public void solve(int pos) {
+        int row = pos /len, col = pos %len;
+        for(int i = 1; i < size+1; i++){
             if(!used.contains(i)){
-                magicsquare[row][col] = i;
+                magicSquare[row][col] = i;
                 used.add(i);
-                if(checkrow(row)){
-                    if(pos == 8 && testMagic()){
+                if(checkRow(row)){
+                    if(pos == size-1 && testMagic()){
                         System.out.println("Done!");
                         print();
                         done = true;
                         return;
                     }
                     else{
-                        System.out.println("Entering recursion");
-                        solve2(pos + 1);
+                        solve(pos + 1);
                     }
                 }
-                magicsquare[row][col] = 0;
+                magicSquare[row][col] = 0;
                 used.remove(i);
             }
-            if(done == true){
+            if(done){
                 return;
             }
         }
     }
 
     //check a row function
-    public boolean checkrow(int row){
+    private boolean checkRow(int row){
         int sum = 0;
-        for(int i = 0; i < 3; i++){
-            //System.out.println("adding" + magicsquare[row][i]);
-            if(magicsquare[row][i] == 0){
+        for(int i = 0; i < len; i++){
+            if(magicSquare[row][i] == 0){
                 return true;
             }
-            sum+=magicsquare[row][i];
+            sum+=magicSquare[row][i];
         }
-        //System.out.println(sum);
-        if(sum != 15){
-            System.out.println(false);
-            return false;
-        }
-        //System.out.println(true);
-        return true;
+        return sum == this.SUM;
     }
     //check a col function
-    public boolean checkcol(int col){
+    private boolean checkCol(int col){
         int sum = 0;
-        for(int[] i : magicsquare){
-            //System.out.println("adding " + i[col]);
+        for(int[] i : magicSquare){
             sum+= i[col];
         }
-        if(sum != 15){
-            //System.out.println(false);
-            return false;
-        }
-        //System.out.println(true);
-        return true;
+        return sum == this.SUM;
     }
-    //check diagonal's function
-    public boolean checkdiag(){
+
+    //check both diagonals
+    private boolean checkDiag(){
         int pos = 0,sum = 0;
-        for(int[] i : magicsquare){
+        for(int[] i : magicSquare){
             sum += i[pos];
             pos++;
         }
-        if(sum != 15){
-            //System.out.println(false);
+        if(sum != this.SUM){
             return false;
         }
         pos = 2; sum = 0;
-        for(int[] i : magicsquare){
+        for(int[] i : magicSquare){
             sum+= i[pos];
             pos--;
         }
-        if(sum != 15){
-            //System.out.println(false);
-            return false;
-        }
-        //System.out.println(true);
-        return true;
+        return sum == this.SUM;
     }
 
     //check everything function;
-    public boolean testMagic(){
-        for(int i = 0; i <3; i++){
-            if(checkrow(i) == false || checkcol(i) == false){
+    private boolean testMagic(){
+        for(int i = 0; i <len; i++){
+            if(!checkRow(i) || !checkCol(i)){
                 return false;
             }
         }
-        System.out.println(checkdiag());
-        return checkdiag();
+        return checkDiag();
     }
-
-
-    public void print() {
-        for (int[] i : magicsquare) {
+    //print the solution.
+    private void print() {
+        for (int[] i : magicSquare) {
             for (int t : i) {
                 System.out.print(t);
             }
             System.out.println();
         }
     }
-
 }
