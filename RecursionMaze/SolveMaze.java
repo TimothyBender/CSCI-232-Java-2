@@ -33,7 +33,7 @@ public class SolveMaze {
 			this.printMaze();
 	    	return;
 	    }
-	
+
 		else {
 			maze[xLoc][yLoc] = 'O';
 			
